@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="20dp"
+    android:elevation="45dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:padding="10dp"
+    android:alpha="0.5"
+    android:background="@color/cardview_dark_background">
+
+
+    <TextView
+        android:id="@+id/tv_episode_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        tools:text="Name of episode"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/episode_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Location of episode"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_episode_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Type of episode"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_episode_type_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Episode type location"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="10dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</com.google.android.material.card.MaterialCardView>
