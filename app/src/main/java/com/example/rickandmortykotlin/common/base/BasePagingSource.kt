@@ -1,9 +1,9 @@
-package com.example.rickandmortykotlin.data.models.response.network.pagingsources.base
+package com.example.rickandmortykotlin.common.base
 
 import android.net.Uri
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
-import com.example.rickandmortykotlin.data.models.response.RickAndMortyResponse
+import com.example.rickandmortykotlin.data.network.models.RickAndMortyResponse
 import retrofit2.HttpException
 import java.io.IOException
 

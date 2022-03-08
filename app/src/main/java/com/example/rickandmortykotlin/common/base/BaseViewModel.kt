@@ -1,13 +1,12 @@
-package com.example.rickandmortykotlin.ui.base
+package com.example.rickandmortykotlin.common.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.rickandmortykotlin.common.Resource
+import com.example.rickandmortykotlin.common.resource.Resource
 import com.example.rickandmortykotlin.presentation.UIState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 abstract class BaseViewModel : ViewModel() {

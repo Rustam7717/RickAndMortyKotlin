@@ -1,7 +1,6 @@
 package com.example.rickandmortykotlin.ui.fragments.episode
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,12 +12,12 @@ import com.example.rickandmortykotlin.R
 import com.example.rickandmortykotlin.databinding.FragmentEpisodeBinding
 import com.example.rickandmortykotlin.ui.adapters.CommonLoadStateAdapter
 import com.example.rickandmortykotlin.ui.adapters.EpisodeAdapter
-import com.example.rickandmortykotlin.ui.base.BaseFragment
+import com.example.rickandmortykotlin.common.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class EpisodeFragment :
-BaseFragment<EpisodeViewModel,FragmentEpisodeBinding>(R.layout.fragment_episode){
+BaseFragment<EpisodeViewModel, FragmentEpisodeBinding>(R.layout.fragment_episode){
 
     private val viewModel: EpisodeViewModel by viewModels()
     private lateinit var binding: FragmentEpisodeBinding

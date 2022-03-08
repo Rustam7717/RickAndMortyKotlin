@@ -10,11 +10,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import com.example.rickandmortykotlin.R
-import com.example.rickandmortykotlin.common.Resource
 import com.example.rickandmortykotlin.databinding.FragmentCharacterBinding
 import com.example.rickandmortykotlin.ui.adapters.CharacterAdapter
 import com.example.rickandmortykotlin.ui.adapters.CommonLoadStateAdapter
-import com.example.rickandmortykotlin.ui.base.BaseFragment
+import com.example.rickandmortykotlin.common.base.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

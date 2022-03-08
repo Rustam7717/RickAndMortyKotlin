@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.rickandmortykotlin.data.models.character.Character
+import com.example.rickandmortykotlin.data.network.models.character.Character
 import com.example.rickandmortykotlin.databinding.ItemCharacterBinding
 import com.example.rickandmortykotlin.ui.base.BaseDiffUtilItemCallBack
 

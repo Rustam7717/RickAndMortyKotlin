@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.data.models.episode
+package com.example.rickandmortykotlin.data.network.models.episode
 
 import com.example.rickandmortykotlin.ui.base.IBaseDiffModel
 import com.google.gson.annotations.SerializedName

@@ -35,7 +35,7 @@
         android:id="@+id/tv_dimension"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dimension of location"
+        tools:text="Dimension of location"
         android:layout_marginStart="12dp"
         android:layout_marginTop="55dp"/>
 

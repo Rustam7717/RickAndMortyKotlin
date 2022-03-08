@@ -1,9 +1,9 @@
 package com.example.rickandmortykotlin.di
 
-import com.example.rickandmortykotlin.data.models.response.network.RetrofitClient
-import com.example.rickandmortykotlin.data.models.response.network.apiservices.CharacterApiService
-import com.example.rickandmortykotlin.data.models.response.network.apiservices.EpisodeApiService
-import com.example.rickandmortykotlin.data.models.response.network.apiservices.LocationApiService
+import com.example.rickandmortykotlin.data.network.RetrofitClient
+import com.example.rickandmortykotlin.data.network.apiservices.CharacterApiService
+import com.example.rickandmortykotlin.data.network.apiservices.EpisodeApiService
+import com.example.rickandmortykotlin.data.network.apiservices.LocationApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

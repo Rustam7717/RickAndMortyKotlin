@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.ui.base
+package com.example.rickandmortykotlin.common.base
 
 import android.os.Bundle
 import android.view.View
@@ -7,7 +7,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.lifecycle.whenResumed
 import androidx.viewbinding.ViewBinding
 import com.example.rickandmortykotlin.presentation.UIState
 import kotlinx.coroutines.flow.StateFlow

@@ -1,7 +1,8 @@
 package com.example.rickandmortykotlin.data.repositories
 
-import com.example.rickandmortykotlin.data.models.response.network.apiservices.LocationApiService
-import com.example.rickandmortykotlin.data.models.response.network.pagingsources.LocationPagingSource
+import com.example.rickandmortykotlin.common.base.BaseRepository
+import com.example.rickandmortykotlin.data.network.apiservices.LocationApiService
+import com.example.rickandmortykotlin.data.network.pagingsources.LocationPagingSource
 import javax.inject.Inject
 
 class LocationRepository @Inject constructor(

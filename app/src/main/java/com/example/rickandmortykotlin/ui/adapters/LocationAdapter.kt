@@ -4,10 +4,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.rickandmortykotlin.data.models.location.Location
+import com.example.rickandmortykotlin.data.network.models.location.Location
 import com.example.rickandmortykotlin.databinding.ItemLocationBinding
 import com.example.rickandmortykotlin.ui.base.BaseDiffUtilItemCallBack
-import com.example.rickandmortykotlin.ui.base.IBaseDiffModel
 
 
 class LocationAdapter :

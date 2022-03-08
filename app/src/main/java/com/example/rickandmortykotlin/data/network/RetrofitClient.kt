@@ -1,8 +1,8 @@
-package com.example.rickandmortykotlin.data.models.response.network
+package com.example.rickandmortykotlin.data.network
 
-import com.example.rickandmortykotlin.data.models.response.network.apiservices.CharacterApiService
-import com.example.rickandmortykotlin.data.models.response.network.apiservices.EpisodeApiService
-import com.example.rickandmortykotlin.data.models.response.network.apiservices.LocationApiService
+import com.example.rickandmortykotlin.data.network.apiservices.CharacterApiService
+import com.example.rickandmortykotlin.data.network.apiservices.EpisodeApiService
+import com.example.rickandmortykotlin.data.network.apiservices.LocationApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

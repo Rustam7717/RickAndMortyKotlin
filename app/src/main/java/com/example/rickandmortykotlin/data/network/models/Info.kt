@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.data.models
+package com.example.rickandmortykotlin.data.network.models
 
 import com.google.gson.annotations.SerializedName
 

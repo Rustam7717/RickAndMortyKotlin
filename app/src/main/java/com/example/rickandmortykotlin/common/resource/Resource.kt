@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.common
+package com.example.rickandmortykotlin.common.resource
 
 sealed class Resource<out T>(
     val data: T? = null,

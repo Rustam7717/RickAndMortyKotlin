@@ -1,6 +1,5 @@
-package com.example.rickandmortykotlin.data.models.response
+package com.example.rickandmortykotlin.data.network.models
 
-import com.example.rickandmortykotlin.data.models.Info
 import com.google.gson.annotations.SerializedName
 
 data class RickAndMortyResponse<T>(

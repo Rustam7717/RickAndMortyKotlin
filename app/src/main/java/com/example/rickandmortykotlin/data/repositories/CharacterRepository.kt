@@ -1,8 +1,9 @@
 package com.example.rickandmortykotlin.data.repositories
 
 
-import com.example.rickandmortykotlin.data.models.response.network.apiservices.CharacterApiService
-import com.example.rickandmortykotlin.data.models.response.network.pagingsources.CharacterPagingSource
+import com.example.rickandmortykotlin.common.base.BaseRepository
+import com.example.rickandmortykotlin.data.network.apiservices.CharacterApiService
+import com.example.rickandmortykotlin.data.network.pagingsources.CharacterPagingSource
 import javax.inject.Inject
 
 class CharacterRepository @Inject constructor(

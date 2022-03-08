@@ -1,7 +1,7 @@
-package com.example.rickandmortykotlin.data.models.response.network.apiservices
+package com.example.rickandmortykotlin.data.network.apiservices
 
-import com.example.rickandmortykotlin.data.models.location.Location
-import com.example.rickandmortykotlin.data.models.response.RickAndMortyResponse
+import com.example.rickandmortykotlin.data.network.models.location.Location
+import com.example.rickandmortykotlin.data.network.models.RickAndMortyResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

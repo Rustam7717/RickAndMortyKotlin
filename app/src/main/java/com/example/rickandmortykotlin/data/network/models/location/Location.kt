@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.data.models.location
+package com.example.rickandmortykotlin.data.network.models.location
 
 import com.example.rickandmortykotlin.ui.base.IBaseDiffModel
 import com.google.gson.annotations.SerializedName

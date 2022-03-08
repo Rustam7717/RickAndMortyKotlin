@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.rickandmortykotlin.data.models.episode.Episode
+import com.example.rickandmortykotlin.data.network.models.episode.Episode
 import com.example.rickandmortykotlin.databinding.ItemEpisodeBinding
 import com.example.rickandmortykotlin.ui.base.BaseDiffUtilItemCallBack as BaseDiffUtilItemCallBack1
 

@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.data.repositories
+package com.example.rickandmortykotlin.common.base
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
@@ -6,8 +6,7 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.liveData
-import com.example.rickandmortykotlin.common.Resource
-import com.example.rickandmortykotlin.data.models.response.network.pagingsources.base.BasePagingSource
+import com.example.rickandmortykotlin.common.resource.Resource
 import kotlinx.coroutines.Dispatchers
 import java.lang.Exception
 
@@ -18,7 +17,8 @@ abstract class BaseRepository {
         try {
             emit(Resource.Success(data= request()))
         }catch (e: Exception) {
-            emit(Resource.Error(message = e.localizedMessage ?:"Error occurred!!")
+            emit(
+                Resource.Error(message = e.localizedMessage ?:"Error occurred!!")
             )
         }
     }
