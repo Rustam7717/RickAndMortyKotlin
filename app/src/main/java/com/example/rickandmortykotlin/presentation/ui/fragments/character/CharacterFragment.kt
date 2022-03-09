@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.rickandmortykotlin.databinding.FragmentCharacterBinding
 import com.example.rickandmortykotlin.presentation.ui.adapters.CharacterAdapter
@@ -21,7 +22,7 @@ class CharacterFragment :
 
     override val viewModel: CharacterViewModel by viewModels()
     override lateinit var binding: FragmentCharacterBinding
-    private val characterAdapter: CharacterAdapter = CharacterAdapter()
+    private val characterAdapter: CharacterAdapter = CharacterAdapter(this::onItemClick)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -53,6 +54,12 @@ class CharacterFragment :
         characterAdapter.addLoadStateListener { loadStates ->
             this.isVisible = loadStates.refresh is LoadState.NotLoading
         }
+    }
+    private fun onItemClick(id:Int){
+        findNavController().navigate(
+            CharacterFragmentDirections
+                .actionCharacterFragmentToCharacterDetailFragment(id)
+        )
     }
 }
 

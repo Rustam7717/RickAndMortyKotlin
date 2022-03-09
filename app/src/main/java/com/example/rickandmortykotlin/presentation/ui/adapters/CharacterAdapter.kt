@@ -9,12 +9,18 @@ import com.example.rickandmortykotlin.data.network.models.character.Character
 import com.example.rickandmortykotlin.databinding.ItemCharacterBinding
 import com.example.rickandmortykotlin.common.base.BaseDiffUtilItemCallBack
 
-class CharacterAdapter :
+class CharacterAdapter(
+    val onItemClick: (id:Int) ->Unit
+) :
     PagingDataAdapter<Character, CharacterAdapter.CharacterViewHolder>(BaseDiffUtilItemCallBack()) {
 
-    class CharacterViewHolder(private val binding: ItemCharacterBinding) :
+    inner class CharacterViewHolder(private val binding: ItemCharacterBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun bind(character: Character) = with(binding) {
+          itemView.setOnClickListener {
+              onItemClick(character.id)
+          }
             tvName.text = character.name
             tvStatus.text = character.status
             tvGender.text = character.gender

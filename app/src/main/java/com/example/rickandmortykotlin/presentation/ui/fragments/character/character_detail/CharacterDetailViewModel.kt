@@ -22,14 +22,4 @@ class CharacterDetailViewModel @Inject constructor(
             repository.fetchDetailCharacter(id)
         }
     }
-
-//    private val _characterState = MutableStateFlow<UIState<Character>>(UIState.Loading)
-//    val characterState: StateFlow<UIState<Character>> = _characterState
-
-//    fun fetchCharacter(id: Int){
-//        _characterState.subscribeTo {
-//            repository.fetchCharacter(id)
-//        }
-//
-//    }
 }
