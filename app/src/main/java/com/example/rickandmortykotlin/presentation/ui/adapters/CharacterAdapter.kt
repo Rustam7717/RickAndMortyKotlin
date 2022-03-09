@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.ui.adapters
+package com.example.rickandmortykotlin.presentation.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.rickandmortykotlin.data.network.models.character.Character
 import com.example.rickandmortykotlin.databinding.ItemCharacterBinding
-import com.example.rickandmortykotlin.ui.base.BaseDiffUtilItemCallBack
+import com.example.rickandmortykotlin.common.base.BaseDiffUtilItemCallBack
 
 class CharacterAdapter :
     PagingDataAdapter<Character, CharacterAdapter.CharacterViewHolder>(BaseDiffUtilItemCallBack()) {

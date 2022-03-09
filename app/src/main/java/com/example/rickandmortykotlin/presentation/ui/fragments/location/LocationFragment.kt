@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.ui.fragments.location
+package com.example.rickandmortykotlin.presentation.ui.fragments.location
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,26 +8,24 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
-import com.example.rickandmortykotlin.R
 import com.example.rickandmortykotlin.databinding.FragmentLocationBinding
-import com.example.rickandmortykotlin.ui.adapters.CommonLoadStateAdapter
-import com.example.rickandmortykotlin.ui.adapters.LocationAdapter
+import com.example.rickandmortykotlin.presentation.ui.adapters.LocationAdapter
 import com.example.rickandmortykotlin.common.base.BaseFragment
+import com.example.rickandmortykotlin.presentation.ui.adapters.CommonLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class LocationFragment :
-    BaseFragment<LocationViewModel, FragmentLocationBinding>(R.layout.fragment_location) {
+    BaseFragment<LocationViewModel, FragmentLocationBinding>() {
 
-    private val viewModel: LocationViewModel by viewModels()
-    private lateinit var binding: FragmentLocationBinding
+    override val viewModel: LocationViewModel by viewModels()
+    override lateinit var binding: FragmentLocationBinding
     private val locationAdapter: LocationAdapter = LocationAdapter()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentLocationBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -37,15 +35,12 @@ class LocationFragment :
         setupRecycler()
     }
 
-
     override fun setupRequest() {
         viewModel.fetchLocations().observe(viewLifecycleOwner) {
             lifecycleScope.launchWhenStarted {
                 locationAdapter.submitData(it)
             }
-
         }
-
     }
 
     private fun setupRecycler() = with(binding.recyclerLocation) {
@@ -57,6 +52,4 @@ class LocationFragment :
 
         }
     }
-
-
 }

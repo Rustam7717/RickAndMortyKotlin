@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.ui.fragments.character
+package com.example.rickandmortykotlin.presentation.ui.fragments.character
 
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn

@@ -1,6 +1,6 @@
 package com.example.rickandmortykotlin.data.network.models.character
 
-import com.example.rickandmortykotlin.ui.base.IBaseDiffModel
+import com.example.rickandmortykotlin.common.base.IBaseDiffModel
 import com.google.gson.annotations.SerializedName
 
 data class Character(

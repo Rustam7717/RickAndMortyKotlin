@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.ui.fragments.episode
+package com.example.rickandmortykotlin.presentation.ui.fragments.episode
 
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
@@ -14,4 +14,5 @@ class EpisodeViewModel @Inject constructor(
 ): BaseViewModel(){
 
     fun fetchEpisodes() = repository.fetchEpisodes().cachedIn(viewModelScope)
+
 }

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="15dp"
-    android:elevation="50dp"
     android:layout_margin="10dp"
+    android:alpha="0.8"
+    android:elevation="50dp"
     android:orientation="vertical"
-    xmlns:tools="http://schemas.android.com/tools">
+    app:cardCornerRadius="15dp">
 
     <ImageView
         android:id="@+id/iv_character"
@@ -23,27 +24,27 @@
         android:layout_marginStart="110dp"
         android:textColor="@color/black"
         android:textSize="20dp"
-        tools:text="@tools:sample/full_names"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:text="@tools:sample/full_names" />
 
     <TextView
         android:id="@+id/tv_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
         android:layout_marginTop="50dp"
         app:layout_constraintTop_toBottomOf="@id/tv_name"
-        android:layout_marginStart="110dp"
-        tools:text="Status"/>
+        tools:text="Status" />
 
     <TextView
         android:id="@+id/tv_gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="110dp"
-        app:layout_constraintTop_toBottomOf="@id/tv_status"
         android:layout_marginTop="70dp"
         android:textStyle="italic"
-        tools:text="Gender"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_status"
+        tools:text="Gender" />
 
 
 </com.google.android.material.card.MaterialCardView>

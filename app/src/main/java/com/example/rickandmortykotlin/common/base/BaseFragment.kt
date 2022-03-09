@@ -12,12 +12,11 @@ import com.example.rickandmortykotlin.presentation.UIState
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-abstract class BaseFragment<ViewModel :
-BaseViewModel, Binding : ViewBinding>(@LayoutRes fragmentCharacter: Int) :
+abstract class BaseFragment<ViewModel : BaseViewModel, Binding : ViewBinding>:
     Fragment() {
 
-    private lateinit var binding: Binding
-    private lateinit var viewModel: ViewModel
+    protected abstract val binding: Binding
+    protected abstract val viewModel: ViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -25,17 +24,18 @@ BaseViewModel, Binding : ViewBinding>(@LayoutRes fragmentCharacter: Int) :
         setupListener()
         setupRequest()
         setupObservers()
-        swipeRefresh() }
+        swipeRefresh()
+    }
 
-   protected open fun initialize() {}
+    protected open fun initialize() {}
 
-   protected open fun setupListener() {}
+    protected open fun setupListener() {}
 
-    open fun setupRequest() {}
+    protected open fun setupRequest() {}
 
-    open fun setupObservers() {}
+    protected open fun setupObservers() {}
 
-    open fun swipeRefresh() {}
+    protected open fun swipeRefresh() {}
 
     protected open fun <T> StateFlow<UIState<T>>.subscribe(
         state: Lifecycle.State = Lifecycle.State.STARTED,
@@ -44,7 +44,7 @@ BaseViewModel, Binding : ViewBinding>(@LayoutRes fragmentCharacter: Int) :
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(state) {
                 this@subscribe.collect {
-                   action(it)
+                    action(it)
                 }
             }
         }

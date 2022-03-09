@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.ui.base
+package com.example.rickandmortykotlin.common.base
 
 import androidx.recyclerview.widget.DiffUtil
 

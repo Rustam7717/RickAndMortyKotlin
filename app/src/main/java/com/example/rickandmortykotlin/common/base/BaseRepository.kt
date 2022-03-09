@@ -8,11 +8,12 @@ import androidx.paging.PagingData
 import androidx.paging.liveData
 import com.example.rickandmortykotlin.common.resource.Resource
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.flow
 import java.lang.Exception
 
 abstract class BaseRepository {
 
-    protected fun<T> doRequest(request:  () -> T) = liveData(Dispatchers.IO) {
+   protected fun<T> doRequest(request: suspend() -> T) = flow {
         emit(Resource.Loading())
         try {
             emit(Resource.Success(data= request()))
@@ -22,6 +23,7 @@ abstract class BaseRepository {
             )
         }
     }
+
     protected fun <Value: Any> doPagingRequest(
         pagingSource: BasePagingSource<Value>,
         pageSize: Int = 10,

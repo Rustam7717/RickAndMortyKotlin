@@ -10,6 +10,9 @@ class CharacterRepository @Inject constructor(
     private val service: CharacterApiService
 ) : BaseRepository() {
 
+    fun fetchDetailCharacter(id: Int) = doRequest {
+        service.fetchCharacterId(id)
+    }
 
     fun fetchCharacters() = doPagingRequest(CharacterPagingSource(service))
 

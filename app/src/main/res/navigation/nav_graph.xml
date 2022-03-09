@@ -7,17 +7,17 @@
 
     <fragment
         android:id="@+id/characterFragment"
-        android:name="com.example.rickandmortykotlin.ui.fragments.character.CharacterFragment"
+        android:name="com.example.rickandmortykotlin.presentation.ui.fragments.character.CharacterFragment"
         android:label="fragment_character"
         tools:layout="@layout/fragment_character" />
     <fragment
         android:id="@+id/episodeFragment"
-        android:name="com.example.rickandmortykotlin.ui.fragments.episode.EpisodeFragment"
+        android:name="com.example.rickandmortykotlin.presentation.ui.fragments.episode.EpisodeFragment"
         android:label="fragment_episode"
         tools:layout="@layout/fragment_episode" />
     <fragment
         android:id="@+id/locationFragment"
-        android:name="com.example.rickandmortykotlin.ui.fragments.location.LocationFragment"
+        android:name="com.example.rickandmortykotlin.presentation.ui.fragments.location.LocationFragment"
         android:label="fragment_location"
         tools:layout="@layout/fragment_location" />
 </navigation>

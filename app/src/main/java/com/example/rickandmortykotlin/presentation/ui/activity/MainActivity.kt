@@ -1,4 +1,4 @@
-package com.example.rickandmortykotlin.ui.activity
+package com.example.rickandmortykotlin.presentation.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setupNavigation()
     }
+
     private fun setupNavigation() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host) as NavHostFragment?
@@ -30,6 +31,5 @@ class MainActivity : AppCompatActivity() {
 //        NavigationUI.setupActionBarWithNavController(binding.toolbar, navController, mAppBarConfiguration)
         NavigationUI.setupWithNavController(binding.bottomNavMenu, navController)
     }
-
 }
 
