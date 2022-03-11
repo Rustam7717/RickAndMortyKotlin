@@ -15,12 +15,13 @@ import com.example.rickandmortykotlin.presentation.ui.adapters.CharacterAdapter
 import com.example.rickandmortykotlin.common.base.BaseFragment
 import com.example.rickandmortykotlin.presentation.ui.adapters.CommonLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
+
 class CharacterFragment :
     BaseFragment<CharacterViewModel, FragmentCharacterBinding>() {
 
-    override val viewModel: CharacterViewModel by viewModels()
+    override val viewModel: CharacterViewModel by viewModel()
     override lateinit var binding: FragmentCharacterBinding
     private val characterAdapter: CharacterAdapter = CharacterAdapter(this::onItemClick)
 

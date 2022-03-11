@@ -5,7 +5,7 @@ import com.example.rickandmortykotlin.data.network.apiservices.LocationApiServic
 import com.example.rickandmortykotlin.data.network.pagingsources.LocationPagingSource
 import javax.inject.Inject
 
-class LocationRepository @Inject constructor(
+class LocationRepository (
     private val service: LocationApiService
 ) : BaseRepository() {
 

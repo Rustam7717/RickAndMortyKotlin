@@ -13,12 +13,13 @@ import com.example.rickandmortykotlin.presentation.ui.adapters.EpisodeAdapter
 import com.example.rickandmortykotlin.common.base.BaseFragment
 import com.example.rickandmortykotlin.presentation.ui.adapters.CommonLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
+
 class EpisodeFragment :
 BaseFragment<EpisodeViewModel, FragmentEpisodeBinding>() {
 
-    override val viewModel: EpisodeViewModel by viewModels()
+    override val viewModel: EpisodeViewModel by viewModel()
     override lateinit var binding: FragmentEpisodeBinding
     private val episodeAdapter: EpisodeAdapter = EpisodeAdapter()
 

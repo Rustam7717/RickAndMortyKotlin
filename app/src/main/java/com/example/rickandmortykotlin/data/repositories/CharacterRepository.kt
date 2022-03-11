@@ -6,7 +6,7 @@ import com.example.rickandmortykotlin.data.network.apiservices.CharacterApiServi
 import com.example.rickandmortykotlin.data.network.pagingsources.CharacterPagingSource
 import javax.inject.Inject
 
-class CharacterRepository @Inject constructor(
+class CharacterRepository (
     private val service: CharacterApiService
 ) : BaseRepository() {
 

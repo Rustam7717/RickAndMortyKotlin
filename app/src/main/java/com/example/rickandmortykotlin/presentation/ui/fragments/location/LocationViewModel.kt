@@ -7,7 +7,7 @@ import com.example.rickandmortykotlin.common.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
-@HiltViewModel
+
 class LocationViewModel @Inject constructor(
     private val repository: LocationRepository
 ) : BaseViewModel(){

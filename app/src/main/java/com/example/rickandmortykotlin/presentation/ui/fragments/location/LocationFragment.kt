@@ -13,12 +13,13 @@ import com.example.rickandmortykotlin.presentation.ui.adapters.LocationAdapter
 import com.example.rickandmortykotlin.common.base.BaseFragment
 import com.example.rickandmortykotlin.presentation.ui.adapters.CommonLoadStateAdapter
 import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
+
 class LocationFragment :
     BaseFragment<LocationViewModel, FragmentLocationBinding>() {
 
-    override val viewModel: LocationViewModel by viewModels()
+    override val viewModel: LocationViewModel by viewModel()
     override lateinit var binding: FragmentLocationBinding
     private val locationAdapter: LocationAdapter = LocationAdapter()
 

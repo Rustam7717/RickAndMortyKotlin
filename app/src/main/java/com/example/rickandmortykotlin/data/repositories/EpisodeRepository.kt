@@ -5,7 +5,7 @@ import com.example.rickandmortykotlin.data.network.apiservices.EpisodeApiService
 import com.example.rickandmortykotlin.data.network.pagingsources.EpisodePagingSource
 import javax.inject.Inject
 
-class EpisodeRepository @Inject constructor(
+class EpisodeRepository (
     private val service: EpisodeApiService
 ) : BaseRepository() {
 

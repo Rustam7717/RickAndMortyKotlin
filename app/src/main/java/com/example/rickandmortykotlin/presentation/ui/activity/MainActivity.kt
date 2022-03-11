@@ -9,7 +9,7 @@ import com.example.rickandmortykotlin.R
 import com.example.rickandmortykotlin.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
-@AndroidEntryPoint
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         val mAppBarConfiguration = AppBarConfiguration.Builder(
             R.id.characterFragment, R.id.episodeFragment, R.id.locationFragment
         ).build()
-//        NavigationUI.setupActionBarWithNavController(binding.toolbar, navController, mAppBarConfiguration)
         NavigationUI.setupWithNavController(binding.bottomNavMenu, navController)
     }
 }

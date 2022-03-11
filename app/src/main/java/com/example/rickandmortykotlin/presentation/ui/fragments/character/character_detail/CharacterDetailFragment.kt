@@ -14,12 +14,13 @@ import com.example.rickandmortykotlin.databinding.FragmentCharacterDetailBinding
 import com.example.rickandmortykotlin.common.base.BaseFragment
 import com.example.rickandmortykotlin.presentation.UIState
 import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-@AndroidEntryPoint
+
 class CharacterDetailFragment :
-BaseFragment<CharacterDetailViewModel, FragmentCharacterDetailBinding>() {
+    BaseFragment<CharacterDetailViewModel, FragmentCharacterDetailBinding>() {
 
-    override val viewModel: CharacterDetailViewModel by viewModels()
+    override val viewModel: CharacterDetailViewModel by viewModel()
     override lateinit var binding: FragmentCharacterDetailBinding
 
     override fun onCreateView(
@@ -49,10 +50,9 @@ BaseFragment<CharacterDetailViewModel, FragmentCharacterDetailBinding>() {
                     it.data.let { data ->
                         tvCharacterFullNameDetail.text = data.name
                         tvGender.text = data.gender
-                       tvSpices.text = data.species
+                        tvSpices.text = data.species
                         tvStatus.text = data.status
                         Glide.with(ivAvatar).load(data.image).into(ivAvatar)
-
                     }
                 }
             }
