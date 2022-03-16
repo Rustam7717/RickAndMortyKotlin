@@ -13,7 +13,7 @@ interface EpisodeApiService {
     ): RickAndMortyResponse<Episode>
 
     @GET("episode")
-    suspend fun fetchEpisode(
+    suspend fun fetchEpisodeId(
         @Path("id") id: Int
     ): Episode
 

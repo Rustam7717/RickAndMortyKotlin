@@ -9,13 +9,18 @@ import com.example.rickandmortykotlin.databinding.ItemLocationBinding
 import com.example.rickandmortykotlin.common.base.BaseDiffUtilItemCallBack
 
 
-class LocationAdapter :
+class LocationAdapter(
+    val onItemClick:(id:Int) -> Unit
+) :
+
     PagingDataAdapter<Location, LocationAdapter.LocationViewHolder>(BaseDiffUtilItemCallBack()) {
 
-
-    class LocationViewHolder(private val binding: ItemLocationBinding) :
+    inner class LocationViewHolder(private val binding: ItemLocationBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(location: Location) = with(binding) {
+            itemView.setOnClickListener {
+                onItemClick(location.id)
+            }
             tvLocationName.text = location.name
             tvDimension.text = location.dimension
             tvLocationType.text = location.type

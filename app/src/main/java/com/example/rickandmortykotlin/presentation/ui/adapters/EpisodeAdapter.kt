@@ -8,12 +8,18 @@ import com.example.rickandmortykotlin.data.network.models.episode.Episode
 import com.example.rickandmortykotlin.databinding.ItemEpisodeBinding
 import com.example.rickandmortykotlin.common.base.BaseDiffUtilItemCallBack as BaseDiffUtilItemCallBack1
 
-class EpisodeAdapter :
+class EpisodeAdapter(
+    val onItemClick: (id:Int) -> Unit
+) :
     PagingDataAdapter<Episode, EpisodeAdapter.EpisodeViewHolder>(BaseDiffUtilItemCallBack1()) {
 
-    class EpisodeViewHolder(private val binding: ItemEpisodeBinding) :
+    inner class EpisodeViewHolder(private val binding: ItemEpisodeBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun bind(episode: Episode) = with(binding) {
+            itemView.setOnClickListener {
+                onItemClick(episode.id)
+            }
             tvEpisodeName.text = episode.name
             tvEpisodeType.text = episode.created
             tvEpisodeTypeLocation.text = episode.episode

@@ -18,12 +18,31 @@
         android:id="@+id/episodeFragment"
         android:name="com.example.rickandmortykotlin.presentation.ui.fragments.episode.EpisodeFragment"
         android:label="fragment_episode"
-        tools:layout="@layout/fragment_episode" />
+        tools:layout="@layout/fragment_episode" >
+        <action
+            android:id="@+id/action_episodeFragment_to_episodeDetailFragment"
+            app:destination="@id/episodeDetailFragment" />
+    </fragment>
+        <fragment
+            android:id="@+id/episodeDetailFragment"
+            android:name="com.example.rickandmortykotlin.presentation.ui.fragments.episode.episode_detail.EpisodeDetailFragment"
+            android:label="fragment_episode_detail"
+            tools:layout="@layout/fragment_episode_detail" >
+            <argument
+                android:name="id"
+                app:argType="integer"
+                android:defaultValue="-1" />
+        </fragment>
+
     <fragment
         android:id="@+id/locationFragment"
         android:name="com.example.rickandmortykotlin.presentation.ui.fragments.location.LocationFragment"
         android:label="fragment_location"
-        tools:layout="@layout/fragment_location" />
+        tools:layout="@layout/fragment_location" >
+        <action
+            android:id="@+id/action_locationFragment_to_locationDetailFragment"
+            app:destination="@id/locationDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/characterDetailFragment"
         android:name="com.example.rickandmortykotlin.presentation.ui.fragments.character.character_detail.CharacterDetailFragment"
@@ -34,4 +53,15 @@
             app:argType="integer"
             android:defaultValue="-1" />
     </fragment>
+    <fragment
+        android:id="@+id/locationDetailFragment"
+        android:name="com.example.rickandmortykotlin.presentation.ui.fragments.location.location_detail.LocationDetailFragment"
+        android:label="fragment_location_detail"
+        tools:layout="@layout/fragment_location_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
 </navigation>

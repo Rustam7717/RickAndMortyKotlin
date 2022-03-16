@@ -4,10 +4,8 @@ import com.example.rickandmortykotlin.data.repositories.CharacterRepository
 import com.example.rickandmortykotlin.common.base.BaseViewModel
 import com.example.rickandmortykotlin.data.network.models.character.Character
 import com.example.rickandmortykotlin.presentation.UIState
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import javax.inject.Inject
 
 
 class CharacterDetailViewModel (

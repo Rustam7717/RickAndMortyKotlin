@@ -13,7 +13,7 @@ interface LocationApiService {
     ): RickAndMortyResponse<Location>
 
     @GET("location")
-    suspend fun fetchLocation(
+    suspend fun fetchLocationId(
         @Path("id") id: Int
     ): Location
 

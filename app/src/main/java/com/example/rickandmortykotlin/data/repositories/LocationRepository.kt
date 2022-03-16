@@ -9,6 +9,10 @@ class LocationRepository (
     private val service: LocationApiService
 ) : BaseRepository() {
 
+    fun fetchDetailLocation(id: Int) = doRequest {
+        service.fetchLocationId(id)
+    }
+
    fun fetchLocations() = doPagingRequest(LocationPagingSource(service))
 
 }

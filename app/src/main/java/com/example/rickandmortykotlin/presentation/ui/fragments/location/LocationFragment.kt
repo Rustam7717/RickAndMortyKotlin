@@ -5,14 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
 import com.example.rickandmortykotlin.databinding.FragmentLocationBinding
 import com.example.rickandmortykotlin.presentation.ui.adapters.LocationAdapter
 import com.example.rickandmortykotlin.common.base.BaseFragment
 import com.example.rickandmortykotlin.presentation.ui.adapters.CommonLoadStateAdapter
-import dagger.hilt.android.AndroidEntryPoint
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
@@ -21,7 +20,7 @@ class LocationFragment :
 
     override val viewModel: LocationViewModel by viewModel()
     override lateinit var binding: FragmentLocationBinding
-    private val locationAdapter: LocationAdapter = LocationAdapter()
+    private val locationAdapter: LocationAdapter = LocationAdapter(this::onItemClick)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -52,5 +51,12 @@ class LocationFragment :
             this.isVisible = loadStates.refresh is LoadState.NotLoading
 
         }
+    }
+
+    private fun onItemClick(id: Int) {
+        findNavController().navigate(
+            LocationFragmentDirections.actionLocationFragmentToLocationDetailFragment(id)
+        )
+
     }
 }
